@@ -1,0 +1,2 @@
+module SeatYourselfHelper
+end
