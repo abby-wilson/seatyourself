@@ -1,0 +1,10 @@
+<h1> Restaurant </h1>
+
+<ul>
+  <% @restaurants.each do |r| %>
+    <li>
+    <p> <%= link_to "#{r.name}", neighbourhood_path(r.id) %> </p>
+    <p> <%= r.neighbourhood %> </p>
+  <% end %>
+    </li>
+</ul>
