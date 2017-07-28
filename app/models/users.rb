@@ -1,0 +1,9 @@
+class Users < ApplicationRecord
+
+  has_secure_password
+  validates :email, presence: true
+
+  has_many :bookings
+  has_many :restaurants, through: :bookings
+
+end
