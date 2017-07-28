@@ -1,12 +1,12 @@
-class BookingsController < ApplicationController
+class BookingController < ApplicationController
 
 def new
-  @booking = Bookings.new
+  @booking = Booking.new
 end
 
 def create
 
-  @booking = Bookings.new
+  @booking = Booking.new
   @booking.restaurant_id  = params[:bookings][:restaurant_id]
   @booking.user_id = params[:bookings][:user_id]
   @booking.date = params[:bookings][:date]

@@ -1,11 +1,11 @@
-class UsersController < ApplicationController
+class UserController < ApplicationController
 
   def new
-    @user = Users.new
+    @user = User.new
   end
 
   def create
-    @user = Users.new
+    @user = User.new
 
     @user.email = params[:users][:email]
     @user.password = params[:users][:password]
