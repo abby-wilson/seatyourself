@@ -3,8 +3,13 @@ Rails.application.routes.draw do
 root 'user#new'
   # root 'restaurant#index'
 
-  resources :restaurants
-  resource  :user
-  resources :bookings
+  resources :restaurant
+  resources :user
+  resources :booking
 
+  get '/login' => 'session#new'
+  post '/login' => 'session#create'
+  get '/logout' => 'session#destroy'
+
+  get '/homepage' => 'restaurant#index'
 end
