@@ -7,7 +7,6 @@ atlas = Restaurant.create(name: 'Atlas', street_address: '18 Dupont Street', nei
 
 
 # users
-
 nadia = User.create(name: 'Nadia Ivannova', email: 'nadiaivannova@gmail.com')
 martine = User.create(name: 'Martine Gagne', email: 'martine.e.gagne@gmail.com')
 abby = User.create(name: 'Abby Wilson', email: 'abigail.wilson1@outlook.com')
