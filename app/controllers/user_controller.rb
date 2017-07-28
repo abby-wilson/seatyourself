@@ -5,10 +5,12 @@ class UserController < ApplicationController
   end
 
   def create
+
     # @user = User.new
     # @user.email = params[:users][:email]
     # @user.password = params[:users][:password]
     @user = User.new(user_params)
+
 
     if @user.save
     flash.now[:notice] = 'Account successfully created!'
