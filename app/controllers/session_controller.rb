@@ -10,7 +10,7 @@ def create
 
   if user && user.authenticate(params[:password])
     session[:user_id] = user.id
-    redirect_to '/homepage'
+    redirect_to '/restaurants'
 
   else
     redirect_to '/login'

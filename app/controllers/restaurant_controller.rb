@@ -1,5 +1,9 @@
 class RestaurantController < ApplicationController
 
+def homepage
+  render :homepage
+end
+
   def index
       @restaurants = Restaurant.all
     end
@@ -9,6 +13,7 @@ class RestaurantController < ApplicationController
     end
 
 def new
+  @restaurants = Restaurant.new
 end
 
 def create

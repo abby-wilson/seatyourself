@@ -9,6 +9,7 @@ class UserController < ApplicationController
 
     @user.email = params[:user][:email]
     @user.password = params[:user][:password]
+    @user.name = params[:user][:name]
 
 
     if @user.save
@@ -18,6 +19,10 @@ class UserController < ApplicationController
     flash.now[:error] = 'Sorry, try again!'
     render :new
     end
+  end
+
+  def show
+
   end
 
 end

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-root 'user#new'
+root 'restaurant#homepage'
   # root 'restaurant#index'
 
   resources :restaurant
@@ -11,5 +11,7 @@ root 'user#new'
   post '/login' => 'session#create'
   get '/logout' => 'session#destroy'
 
-  get '/homepage' => 'restaurant#index'
+  get '/homepage' => 'restaurant#homepage'
+  get '/restaurants' => 'restaurant#index'
+  get '/profile' => 'user#show'
 end
