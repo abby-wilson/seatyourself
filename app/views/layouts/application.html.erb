@@ -1,14 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Seatyourself</title>
+  <title>SeatYourself</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
+<header class="header">
+
+ <h1>SeatYourself</h1>
+
+ <ul class="headernav">
+   <li> <a href="#">Profile </a> | <a href="#">Restaurants </a> | <a href="/#">Logout</a></li>
+ </ul>
+
+</header>
 <body>
 
 <%= yield %>
 
 </body>
+
+<footer class="footer">
+
+<p> &copy; SeatYourself 2017</p>
+<ul class="footernav">
+  <li>About | Contact</li>
+</ul>
+
+</footer>
 </html>

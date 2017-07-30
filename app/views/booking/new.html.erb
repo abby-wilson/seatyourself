@@ -2,6 +2,9 @@
 
 <%=form_for @booking, url: {action: "create"} do |f| %>
 
+  <%= f.hidden_field :user_id %>
+  <!-- <%= f.hidden_field :restaurant_id %> -->
+
 <div class="field">
   <%= f.label :date %>
   <%= f.date_field :date %>
@@ -17,6 +20,6 @@
     <%= f.number_field :party_size %>
   </div>
 
-  <%= f.submit 'Sign Up' %>
+  <%= f.submit 'Confirm Booking' %>
 
-  <% end %> 
+  <% end %>

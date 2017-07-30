@@ -14,4 +14,6 @@ root 'restaurant#homepage'
   get '/homepage' => 'restaurant#homepage'
   get '/restaurants' => 'restaurant#index'
   get '/profile' => 'user#show'
+  get '/restaurantsignup' => 'restaurant#new'
+  get '/newbooking' => 'booking#new'
 end

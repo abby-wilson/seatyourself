@@ -23,6 +23,8 @@ class UserController < ApplicationController
 
   def show
 
-  end
+  #  @user = User.find_by(params[:user][:id])
+
+ end
 
 end
