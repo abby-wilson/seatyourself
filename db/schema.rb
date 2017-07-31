@@ -10,27 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170729194446) do
-
-  create_table "Users", force: :cascade do |t|
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-    t.string   "name"
-    t.string   "email"
-    t.string   "password_digest"
-  end
-
-  create_table "available_times", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer  "time"
-    t.boolean  "available"
-  end
+ActiveRecord::Schema.define(version: 20170731191530) do
 
   create_table "bookings", force: :cascade do |t|
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
-    t.string   "booking"
     t.date     "date"
     t.time     "time"
     t.integer  "party_size"
@@ -50,6 +34,8 @@ ActiveRecord::Schema.define(version: 20170729194446) do
     t.time     "opening_time"
     t.time     "closing_time"
     t.integer  "max_capacity"
+    t.string   "photo"
+    t.integer  "user_id"
   end
 
   create_table "sessions", force: :cascade do |t|
@@ -57,6 +43,16 @@ ActiveRecord::Schema.define(version: 20170729194446) do
     t.string   "password"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+    t.string   "name"
+    t.string   "email"
+    t.string   "password_digest"
+    t.integer  "credits"
+    t.string   "role",            default: "user", null: false
   end
 
 end

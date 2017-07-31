@@ -15,5 +15,7 @@ root 'restaurant#homepage'
   get '/restaurants' => 'restaurant#index'
   get '/profile' => 'user#show'
   get '/restaurantsignup' => 'restaurant#new'
-  get '/newbooking' => 'booking#new'
+  get '/restaurantindex' => 'restaurant#index'
+  get '/restaurant' => 'restaurant#show'
+  get 'restaurants/:restaurant_id/newbooking' => 'booking#new', as: 'restaurant_booking' 
 end

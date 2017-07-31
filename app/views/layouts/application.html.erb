@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html>
+<div class="app">
+
+
 <head>
   <title>SeatYourself</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
+
 <header class="header">
 
- <h1>SeatYourself</h1>
+<div class="image">
+  <%= image_tag "SeatYourself.png" %>
+</div>
 
  <ul class="headernav">
-   <li> <a href="#">Profile </a> | <a href="#">Restaurants </a> | <a href="/#">Logout</a></li>
- </ul>
+   <li> <a href="/profile">Profile </a> | <a href="/restaurants">Restaurants </a> | <a href="/homepage">Home</a> </li>
+</ul>
 
 </header>
 <body>
@@ -25,8 +31,9 @@
 
 <p> &copy; SeatYourself 2017</p>
 <ul class="footernav">
-  <li>About | Contact</li>
+  <li> <a href="#">About</a> | <a href="#">Contact</a></li>
 </ul>
 
 </footer>
+</div>
 </html>

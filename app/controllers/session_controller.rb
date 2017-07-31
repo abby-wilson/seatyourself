@@ -8,12 +8,12 @@ def create
   @session = Session.new
   user = User.find_by_email(params[:email])
 
-  if user && user.authenticate(params[:password])
+  if user.authenticate(params[:password])
     session[:user_id] = user.id
-    redirect_to '/restaurants'
+    redirect_to '/profile'
 
   else
-    redirect_to '/login'
+    redirect_to '/restaurants'
   end
 
 end

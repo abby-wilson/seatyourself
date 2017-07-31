@@ -14,27 +14,26 @@
  *= require_self
  */
 
- .header {
-   background-color: #2ef7c5;
-   font-family: roboto;
-   font-weight: light;
-   color: white;
-   text-align: center;
-   padding: 20px
+.app {
+  font-family: roboto;
+}
 
-
- }
+.image {
+  width: 100%;
+  display: inline-block;
+  position: relative;
+}
 
  .headernav {
    list-style-type: none;
    display: inline-block;
    position: absolute;
-   top: 40px;
-   right: 30px
+   top: 145px;
+   left: 60px
  }
 
  .footer {
-   background-color: #2ef7c5;
+   background-color: lightgrey;
    font-family: roboto;
    font-weight: light;
    position: fixed;
@@ -50,6 +49,5 @@
    position: absolute;
    right: 30px;
    bottom: 7px
-
 
  }

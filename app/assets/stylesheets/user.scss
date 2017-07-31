@@ -1,3 +1,23 @@
 // Place all the styles related to the User controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.username {
+  color: black;
+  // position: absolute;
+  text-align: right;
+  font-family: roboto;
+  }
+  .points {
+    color: red;
+    text-align: left;
+    font-family: roboto;
+    display: inline-block;
+    position: absolute;
+    right: 12px;
+    top: 185px
+  }
+
+  .activebookings {
+    font-family: roboto;
+  }

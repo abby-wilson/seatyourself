@@ -1,28 +1,14 @@
 <h1>
   <% if logged_in? %>
-    <p>Welcome, <%= current_user.name%></p>
+    <p class="username">Welcome, <%= current_user.name%>!</p>
     <% else %>
-    Not loged in
+    Not logged in
 
   <% end %>
 </h1>
 
-<h3> <%= "You have '#{@points}' of points" %> </h3>
-
-<div class="Current_bookings">
-  <h2> "Current Bookings" </h2>
-  <p></p>
-</div>
-
-<div class="Previous_bookings">
-  <h2>"Previous Bookings"</h2>
-
-</div>
-
-<div class="Links">
-  # make a new booking
-
-  # view restaurants
-</div>
-Credits
-Active bookings
+<% if current_user.role == "user" %>
+    <%= render 'user_profile' %>
+<% else %>
+    <%= render 'owner_profile' %>
+<% end %>

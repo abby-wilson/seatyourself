@@ -15,8 +15,8 @@ class ApplicationController < ActionController::Base
   def authorize
     redirect_to '/login' unless current_user
   end
-
+  #
   def user_id
-      @user_id = User.current_user[:id]
+      @user_id = current_user[:id]
   end
 end
