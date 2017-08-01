@@ -24,4 +24,11 @@ def create
 
 end
 
+
+
+def show
+  # PRINT ALL BOOKINGS WITH THE CURRENT USER ID THAT HAPPEN AFTER THE TIME.NOW 
+end
+
+
 end
