@@ -12,4 +12,7 @@ class User < ApplicationRecord
     ALLOWED_ROLES.include?(self.role)
   end
 
+  def credit
+    bookings.all.count
+  end
 end
