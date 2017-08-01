@@ -8,8 +8,22 @@
   <h2>Active Bookings</h2>
 
   <ul class="ablist">
-    <li> Booking 1 with Info and Picture</li>
-    <li> Booking 2 with Info and Picture</li>
+
+    <% @booking_array.each do |booking|%>
+
+      <li> Restaurant : <%= booking.restaurant.name %> </li>
+      <li> Party Size : <%= booking.party_size %> </li>
+      <li>Time : <%= booking.time %> </li>
+      <li>Date : <%= booking.date %> </li>
+    <p>|</p>
+    <p>|</p>
+
+
+
+    <% end %>
+
+
+
   </ul>
 
 </div>

@@ -23,7 +23,12 @@ class UserController < ApplicationController
   end
 
   def show
-
-
+    if current_user
+      @booking_array = current_user.bookings.all
+    else
+      flash.now[:error] = "Nice try"
+    end
+    return @booking_array
   end
+
 end

@@ -5,6 +5,8 @@
 <h3> <%=@restaurants.street_address %></h3>
 <h3> Neighbourhood:<%= @restaurants.neighbourhood %></h3>
 <h3> Price Range: <%= @restaurants.price_range %></h3>
+<h3>Opening Time: <%= @restaurants.opening_time %></h3>
+<h3>Closing Time: <%= @restaurants.closing_time %></h3>
 
 <h3> <%=@restaurants.menu %></h3>
 <h2><%= link_to "Make a Booking", restaurant_booking_path(@restaurants) %></h2>
